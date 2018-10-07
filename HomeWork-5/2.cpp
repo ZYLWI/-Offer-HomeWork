@@ -1,3 +1,9 @@
+/*
+	面试题:替换空格
+	题目：请实现一个函数，把字符串中的每个空格替换成"%20"。例如，输入"We are happy",则输出"We%20are%20happy"。
+	解题思路：从前向后遍历字符串，每遇到空格需要扩充加载2个存储空间，并且由后向前依次拷贝，在空格后位置添加%20，时间复杂度O(n^2)。
+*/
+
 class Solution {
 public:
 	void replaceSpace(char *str,int length) {
