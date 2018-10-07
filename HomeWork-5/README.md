@@ -32,3 +32,4 @@
 解析2：从前向后遍历字符串，每遇到空格需要扩充加载2个存储空间，在空格后位置添加%20，时间复杂度O(n^2)。<br>
 [Interview question Answer 2](https://github.com/ZYLWI/JIANZHIOFFER-Pratice/blob/master/HomeWork-5/2.cpp)<br>
 解析3：从后向前遍历字符串，先遍历一次字符串找到空格对应个数，使用计数器追随扩充后对应的位置，由后向前依次拷贝，在空格处添加%20,时间复杂度O(n)<br>
+[Interview question Answer 3](https://github.com/ZYLWI/JIANZHIOFFER-Pratice/blob/master/HomeWork-5/3.cpp)<br>
