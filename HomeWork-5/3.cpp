@@ -1,3 +1,4 @@
+//if(str[len] == ' ')不可以写为if(str[len--] == ' ')其每进行一次判断均会自动减一使得结果出错
 class Solution {
 public:
 	void replaceSpace(char *str,int length) {
