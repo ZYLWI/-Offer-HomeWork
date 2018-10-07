@@ -25,3 +25,4 @@
 >2. str3和str4是两个指针，我们无须为它们分配内存以存储字符串的内容，而只需要把它们指向"hello world"在内存中的地址就可以了。由于"hello world"是常量字符，它在内存中只有一个拷贝，因此str3和str4指向的是同一个地址。所以比较str3和str4的值得到的结果是相同的，输出第二行是"str3 and str4 are same"。<br>
 ### Interview question 5: repalcement string
 >题目：请实现一个函数，把字符串中的每个空格替换成"%20"。例如，输入"We are happy",则输出"We%20are%20happy"
+[Answer 1](https://github.com/ZYLWI/-Offer-HomeWork/blob/master/HomeWork-5/1.cpp)
