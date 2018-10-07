@@ -27,6 +27,7 @@
 >题目：请实现一个函数，把字符串中的每个空格替换成"%20"。例如，输入"We are happy",则输出"We%20are%20happy"<br>
 **允许开辟新的空间**<br>
 解析1：首先开辟一个空间大小相同的字符串进行拷贝赋值，然后从前向后遍历字符串，每次遇到空格赋值为*%20*,向后赋值即可，时间复杂度O(n)，空间复杂度为O(n)。<br>
-[Interview question Answer 1](https://github.com/ZYLWI/-Offer-HomeWork/blob/master/HomeWork-5/1.cpp)
+[Interview question Answer 1](https://github.com/ZYLWI/-Offer-HomeWork/blob/master/HomeWork-5/1.cpp)<br>
 **不允许开辟新的空间**<br>
-解析2：
+解析2：从前向后遍历字符串，每遇到空格需要扩充加载2个存储空间，并且由后向前依次拷贝，在空格后位置添加%20，时间复杂度O(n^2)。<br>
+[Interview question Answer 2](https://github.com/ZYLWI/JIANZHIOFFER-Pratice/blob/master/HomeWork-5/2.cpp)<br>
