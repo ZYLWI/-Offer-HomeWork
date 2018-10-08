@@ -92,3 +92,14 @@ void RemoveNode(ListNode** pHead, int value){
 	}
 }
 ```
+> 输入一个链表的头节点，从尾到头反过来打印每个节点的值。链表定义如下：
+```C++
+struct ListNode{
+	int m_nKey;
+	ListNode* m_pNext;
+}
+```
+解析1：开辟新的内存，不改变链表结构。逆序打印，将链表中的点压进栈中，顺次输出返回逆序序列。<br>
+[Interview question Answer 1](https://github.com/ZYLWI/-Offer-HomeWork/blob/master/HomeWork-5/1.cpp)<br>
+解析2：不开辟新的内存，改变链表结构。利用3个指针，改变链表结构，使其**原地逆序**输出<br>
+[Interview question Answer 2]()<br>
