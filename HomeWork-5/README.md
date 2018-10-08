@@ -100,6 +100,6 @@ struct ListNode{
 }
 ```
 解析1：开辟新的内存，不改变链表结构。逆序打印，将链表中的点压进栈中，顺次输出返回逆序序列。<br>
-[Interview question Answer 1](https://github.com/ZYLWI/-Offer-HomeWork/blob/master/HomeWork-5/1.cpp)<br>
+[Interview question Answer 1](https://github.com/ZYLWI/JIANZHIOFFER-Pratice/blob/master/HomeWork-5/6-1.cpp)<br>
 解析2：不开辟新的内存，改变链表结构。利用3个指针，改变链表结构，使其**原地逆序**输出<br>
-[Interview question Answer 2]()<br>
+[Interview question Answer 2](https://github.com/ZYLWI/JIANZHIOFFER-Pratice/blob/master/HomeWork-5/6-2.cpp)<br>
