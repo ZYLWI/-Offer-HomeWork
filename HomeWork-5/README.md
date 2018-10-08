@@ -33,3 +33,60 @@
 [Interview question Answer 2](https://github.com/ZYLWI/JIANZHIOFFER-Pratice/blob/master/HomeWork-5/2.cpp)<br>
 解析3：从后向前遍历字符串，先遍历一次字符串找到空格对应个数，使用计数器追随扩充后对应的位置，由后向前依次拷贝，在空格处添加%20,时间复杂度O(n)<br>
 [Interview question Answer 3](https://github.com/ZYLWI/JIANZHIOFFER-Pratice/blob/master/HomeWork-5/3.cpp)<br>
+## Small Section 2.3.3 string:<br>
+>链表是一种动态数据结构，是因为在创建链表时，无需知道链表的长度。当插入一个节点时，只需要为新节点分配内存，然后调整指针的指向来确保每个新节点被链接到链表当中。内存不是在创建链表时一次性完成的，而是每添加一个节点分配一次内存。由于没有闲置的内存，链表的空间效率比数组高。<br>
+**单链表定义如下**
+```C++
+	struct ListNode{
+		int	m_nValue;
+		ListNode* m_pnext;
+	}
+```
+**向链表的末尾添加一个节点**
+```C++
+	void AddToTail(ListNode** pHead, int value){
+		ListNode* pNew = new ListNode();
+		pNew->m_nValue = value;
+		pNew->m_pNext = nullptr;
+		
+		if(*pHead == nullptr){
+			*pHead = pNew;
+		}
+		else
+		{
+			ListNode* pNode = *pHead;
+			while(pNode->m_pNext != nullptr)
+				pNode = pNode->m_pNext;
+			pNode->m_pNext = pNew;
+		}
+	}
+```
+> *函数的第一个参数pHead是一个指向指针的指针。当向一个空链表中插入一个节点时，新插入的节点就是链表的头指针。由于此时会改动头指针，因此必须把pHead参数设置为指向指针的指针，否则出了这个函数pHead仍然是一个空指针。*
+> 由于链表中的内存不是一次性分配的，因而无法保证链表的内存和数组一样连续。因此，如果想在链表中找到它的第i个节点，那么我们只能从头节点开始，沿着指向下一个节点的指针遍历链表，它的时间效率为O(n)。而在数组中，我们可以根据下标在O(1)时间内找到第i个元素。
+**在链表中找到第一个含有某值的节点并且删除该节点**
+```C++
+void RemoveNode(ListNode** pHead, int value){
+	if(pHead == nullptr || *pHead == nullptr)
+		return;
+	ListNode* pToBeDeleted = nullptr;
+	if((*pHead)->m_nvalue == value){
+		pToBeDeleted = *pHead;
+		*pHead = (*pHead)->m_pNext;
+	}	
+	else
+	{
+		ListNode* pNode = *pHead;
+		while(pNode->m_pNext != nullptr && pNode->m_pNext->m_nValue != value)
+			pNode = pNode->m_pNext;
+		
+		if(pNode->m_pNext != nullptr && pNode->m_pNext->m_nValue == value){
+			pToBeDeleted = pNode->m_pNext;
+			pNode->m_pNext = pNode->m_pNext->m_pNext;
+		}
+	}
+	if(pToBeDeleted != nullptr){
+		delete pToBeDeleted;
+		pToBeDeleted = nullptr;
+	}
+}
+```
